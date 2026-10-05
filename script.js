@@ -4,7 +4,9 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 const I18N_EN = {
   'meta.title': document.title,
   'resume': 'Resume-Pooree-English.pdf',
-  'mail.subject': 'Project inquiry from',
+  'contact.copied': 'Copied!',
+  'toast.email': 'Email copied',
+  'toast.phone': 'Phone number copied',
 };
 document.querySelectorAll('[data-i18n]').forEach(el => {
   I18N_EN[el.dataset.i18n] ??= el.innerHTML;
@@ -137,20 +139,59 @@ const setContact = (open) => {
   document.body.classList.toggle('contact-open', open);
   document.body.classList.toggle('no-scroll', open);
   contact.setAttribute('aria-hidden', !open);
-  if (open) setTimeout(() => document.getElementById('cEmail').focus(), 350);
 };
 document.querySelectorAll('[data-open-contact]').forEach(b => b.addEventListener('click', () => setContact(true)));
 document.querySelectorAll('[data-close-contact]').forEach(b => b.addEventListener('click', () => setContact(false)));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') setContact(false); });
 
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const email = document.getElementById('cEmail').value;
-  const name = document.getElementById('cName').value;
-  const msg = document.getElementById('cMsg').value;
-  const subject = encodeURIComponent(`${t('mail.subject')} ${name}`);
-  const body = encodeURIComponent(`${msg}\n\n— ${name} (${email})`);
-  window.location.href = `mailto:pooree.limskun@gmail.com?subject=${subject}&body=${body}`;
+/* ---------- Copy contact info ---------- */
+// The Clipboard API can be blocked when the page is opened as a local file,
+// so fall back to the older execCommand approach.
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch (e) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    const ok = document.execCommand('copy');
+    ta.remove();
+    return ok;
+  }
+}
+
+const toast = document.querySelector('.toast');
+let toastTimer;
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
+// Sidebar icons: copy and confirm with a toast.
+document.querySelectorAll('.side-social [data-copy]').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    if (await copyText(btn.dataset.copy)) showToast(t(btn.dataset.toast));
+  });
+});
+
+// Copy buttons in the contact panel: confirm on the button itself.
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    if (!(await copyText(btn.dataset.copy))) return;
+    btn.textContent = t('contact.copied');
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = t('contact.copy');
+      btn.classList.remove('copied');
+    }, 1500);
+  });
 });
 
 /* ---------- Project slider buttons ---------- */

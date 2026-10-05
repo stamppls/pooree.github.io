@@ -83,8 +83,25 @@ section { padding: 120px clamp(20px, 6vw, 90px); }
 .nav-link:hover span { opacity: 1; transform: none; }
 
 .side-social { display: flex; flex-direction: column; gap: 14px; }
-.side-social a { color: var(--ink); opacity: .55; transition: 200ms; }
-.side-social a:hover { opacity: 1; color: var(--primary); transform: translateY(-2px); }
+.side-social a, .side-social button {
+  display: grid; place-items: center;
+  background: none; border: 0; padding: 0; cursor: pointer;
+  color: var(--ink); opacity: .55; transition: 200ms;
+}
+.side-social a:hover, .side-social button:hover { opacity: 1; color: var(--primary); transform: translateY(-2px); }
+
+.toast {
+  position: fixed; left: 50%; bottom: 32px; z-index: 200;
+  transform: translate(-50%, 20px);
+  background: #15803d; color: #fff;
+  font: 500 .95rem var(--font-head);
+  padding: 12px 22px; border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(21, 128, 61, .3);
+  opacity: 0; pointer-events: none;
+  transition: opacity 250ms ease, transform 250ms ease;
+  white-space: nowrap;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
 .side-social svg { width: 20px; height: 20px; }
 
 .lang-switch {
@@ -98,7 +115,6 @@ section { padding: 120px clamp(20px, 6vw, 90px); }
 }
 .lang-switch button:hover { color: var(--ink); }
 .lang-switch button[aria-pressed="true"] { color: var(--primary); }
-
 
 /* ---------- Contact panel ---------- */
 .contact-back {
@@ -125,28 +141,8 @@ body.contact-open .contact-back { opacity: 1; pointer-events: auto; }
 .contact-return:hover { color: var(--primary); }
 .contact-return:hover svg { transform: translateX(-4px); }
 .contact-return svg { transition: 200ms; }
-.contact h2 { font-size: 3rem; margin: 40px 0 16px; }
-.contact-num { display: flex; flex-direction: column; gap: 4px; margin-bottom: 36px; }
-.contact-num a { font-family: var(--font-head); color: var(--ink); width: fit-content; }
-.contact-num a:hover { color: var(--primary); }
-.contact-form { display: flex; flex-direction: column; gap: 22px; }
-.input-group { position: relative; }
-.input-group input, .input-group textarea {
-  width: 100%; font: inherit; color: var(--ink);
-  background: var(--bg); border: 2px solid transparent;
-  border-radius: 8px; padding: 22px 16px 10px; resize: vertical;
-  transition: 200ms;
-}
-.input-group label {
-  position: absolute; left: 18px; top: 16px;
-  color: var(--muted); pointer-events: none; transition: 200ms;
-}
-.input-group input:focus, .input-group textarea:focus { outline: none; border-color: var(--primary); background: #fff; }
-.input-group input:focus + label, .input-group input:not(:placeholder-shown) + label,
-.input-group textarea:focus + label, .input-group textarea:not(:placeholder-shown) + label {
-  top: 5px; font-size: .75rem; color: var(--primary);
-}
-.form-note { font-size: .82rem; color: var(--muted); margin: -6px 0 0; }
+.contact h2 { font-size: 3rem; margin: 40px 0 8px; }
+.contact-intro { color: var(--muted); margin: 0 0 28px; }
 
 .btn-primary {
   display: inline-flex; align-items: center; gap: 10px; width: fit-content;
@@ -390,6 +386,30 @@ body.contact-open .contact-back { opacity: 1; pointer-events: auto; }
 .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 50px; }
 .about-text p { color: #444; max-width: 640px; }
 .about-text .btn-primary { margin-top: 20px; }
+.contact-cards { display: flex; flex-direction: column; gap: 12px; }
+.contact-card {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--bg); padding: 16px 18px; border-radius: var(--radius);
+}
+.contact-icon {
+  flex: none; width: 46px; height: 46px; border-radius: 12px;
+  display: grid; place-items: center;
+  background: var(--primary-soft); color: var(--primary);
+}
+.contact-info { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.contact-label { font-size: .8rem; color: var(--muted); }
+.contact-info a {
+  font: 600 1.02rem var(--font-head); color: var(--ink);
+  overflow-wrap: anywhere; transition: 200ms;
+}
+.contact-info a:hover { color: var(--primary); }
+.copy-btn {
+  flex: none; background: var(--surface); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 6px; cursor: pointer;
+  font: 500 .82rem var(--font-head); padding: 8px 14px; transition: 200ms;
+}
+.copy-btn:hover { border-color: var(--primary); color: var(--primary); }
+.copy-btn.copied { background: var(--ink); border-color: var(--ink); color: #fff; }
 .about-side { display: flex; flex-direction: column; gap: 20px; }
 .info-card { background: var(--surface); padding: 28px; border-radius: var(--radius); box-shadow: var(--shadow); }
 .info-card h4 { font-size: 1.1rem; margin-bottom: 16px; }

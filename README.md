@@ -9,7 +9,7 @@ The site is available in **English and Thai** — switch with the `EN / TH` togg
 - Bilingual content (EN / TH) with the chosen language remembered between visits
 - Typewriter hero styled like a code editor, numbered "How I work" steps, and a chat-style case study
 - Horizontally scrolling project cards, work-experience timeline, skills and education
-- Slide-in contact panel (opens the visitor's email app with the message pre-filled)
+- "Contact me" button that opens a slide-in panel with email and phone, each with a one-click copy button
 - Downloadable resume PDF that matches the selected language
 - Responsive layout for desktop and mobile; respects `prefers-reduced-motion`
 - Plain HTML, CSS and JavaScript — no framework, no build step
