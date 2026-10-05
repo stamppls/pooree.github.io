@@ -1,6 +1,6 @@
 # Pooree Limskun — Portfolio
 
-Personal portfolio website of **Pooree Limskun**, Backend Developer • Full Stack Developer with 7+ years of experience in Node.js, NestJS, TypeScript and Google Cloud Platform.
+Personal portfolio website of **Pooree Limskun**, Software Developer with 7+ years of experience — 5 years specializing in backend with Node.js and NestJS, and 2 years building full-stack with Angular — shipping to Google Cloud Platform.
 
 The site is available in **English and Thai** — switch with the `EN / TH` toggle in the sidebar.
 

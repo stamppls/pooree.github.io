@@ -1,7 +1,7 @@
 /* Thai translations. English is read from the HTML itself,
    so only keys that differ in Thai need to be listed here. */
 const I18N_TH = {
-  'meta.title': 'ภูรี ลิ้มสกุล — Backend Developer',
+  'meta.title': 'ภูรี ลิ้มสกุล — Software Developer',
   'resume': 'Resume-Pooree-Thai.pdf',
 
   'nav.home': 'หน้าแรก',
@@ -21,10 +21,10 @@ const I18N_TH = {
 
   'hero.l1': 'สวัสดี, ฉันชื่อ <em>ภูรี</em> !',
   'hero.l2': 'ฉันออกแบบและพัฒนา',
-  'hero.l3': 'ระบบ Backend.',
+  'hero.l3': 'Web Application.',
   'hero.badge1': 'ประสบการณ์ <b>7+</b> ปี',
-  'hero.badge2': 'Node.js <b>5+</b> ปี',
-  'hero.sub': 'Backend Developer • Full Stack Developer — พัฒนา REST API, Database และ Business Logic สำหรับระบบที่ใช้งานจริง และ Deploy ขึ้น Google Cloud ด้วย Docker',
+  'hero.badge2': 'Backend <b>5</b> ปี · Full Stack <b>2</b> ปี',
+  'hero.sub': 'Software Developer — เชี่ยวชาญ Backend ด้วย Node.js และ NestJS 5 ปี เคยพัฒนาแบบ Full Stack 2 ปี ดูแลระบบได้ตั้งแต่ฐานข้อมูล หน้าจอ จนถึง Production บน Google Cloud',
   'hero.more': 'ดูเพิ่มเติม',
 
   'process.label': 'วิธีการทำงานของฉัน',
@@ -93,9 +93,9 @@ const I18N_TH = {
   'skills.tools': 'เครื่องมือ',
   'skills.learning': 'กำลังศึกษา',
 
-  'about.title': 'นักพัฒนาที่ใส่ใจ<span>ระบบหลังขึ้นใช้งานจริง</span>',
-  'about.p1': 'มีประสบการณ์พัฒนาซอฟต์แวร์มากกว่า 7 ปี โดยเน้นการพัฒนา Backend ด้วย Node.js Ecosystem (Express.js, NestJS, TypeScript) มากกว่า 5 ปี',
-  'about.p2': 'มีประสบการณ์ในการออกแบบและพัฒนา REST API, Database และ Business Logic สำหรับใช้งานจริง โดยให้ความสำคัญกับ Performance, Stability และ Maintainability เพื่อให้ระบบสามารถดูแลและพัฒนาต่อได้ในระยะยาว เข้าใจการทำงานของระบบแบบ End-to-End ตั้งแต่ Frontend, Backend จนถึงการ Deploy ระบบขึ้น Production บน Google Cloud Platform (Cloud Run, Cloud SQL) โดยใช้ Docker',
+  'about.title': 'สร้างซอฟต์แวร์ที่<span>เสถียร มีประสิทธิภาพ และดูแลต่อได้</span>',
+  'about.p1': 'มีประสบการณ์พัฒนาซอฟต์แวร์มากกว่า 7 ปี โดยเริ่มต้นสายงานด้วยการพัฒนาแบบ Full Stack 2 ปี ก่อนจะเน้นการพัฒนา Backend ด้วย Node.js Ecosystem (Express.js, NestJS, TypeScript) มากกว่า 5 ปี',
+  'about.p2': 'มีประสบการณ์ในการออกแบบและพัฒนา REST API, Database และ Business Logic สำหรับใช้งานจริง โดยให้ความสำคัญกับ Performance, Stability และ Maintainability เพื่อให้ระบบสามารถดูแลและพัฒนาต่อได้ในระยะยาว ด้วยพื้นฐานจากประสบการณ์ทำงาน จึงเข้าใจการทำงานของระบบแบบ End-to-End ตั้งแต่ Frontend, Backend จนถึงการ Deploy ระบบขึ้น Production บน Google Cloud Platform (Cloud Run, Cloud SQL) โดยใช้ Docker',
   'about.cta': 'คุยกันเลย',
   'about.edu': 'ประวัติการศึกษา',
   'edu1.deg': 'ปริญญาตรี สาขาวิทยาการคอมพิวเตอร์',
