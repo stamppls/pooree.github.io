@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pooree Limskun — Backend Developer</title>
+  <meta name="description" content="Pooree Limskun — Backend & Full Stack Developer with 7+ years of experience in Node.js, NestJS, TypeScript and Google Cloud Platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&family=Sora:wght@300;400;600;700;800&family=Fira+Code:wght@400;500&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Sidebar (desktop) / top bar (mobile) ===== -->
+  <aside class="sidebar">
+    <a href="#home" class="logo" aria-label="Home">PL<span>.</span></a>
+
+    <button class="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav">
+      <a href="#home" class="nav-link active">
+        <svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+        <span data-i18n="nav.home">Home</span>
+      </a>
+      <a href="#process" class="nav-link">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h6"/></svg>
+        <span data-i18n="nav.process">Process</span>
+      </a>
+      <a href="#projects" class="nav-link">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <span data-i18n="nav.projects">Projects</span>
+      </a>
+      <a href="#experience" class="nav-link">
+        <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
+        <span data-i18n="nav.experience">Experience</span>
+      </a>
+      <a href="#about" class="nav-link">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+        <span data-i18n="nav.about">About me</span>
+      </a>
+    </nav>
+
+    <div class="lang-switch">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <span>/</span>
+      <button type="button" data-lang="th" aria-pressed="false">TH</button>
+    </div>
+
+    <div class="side-social">
+      <a href="mailto:pooree.limskun@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      </a>
+      <a href="tel:0957594433" aria-label="Phone">
+        <svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+      </a>
+      <a href="Resume-Pooree-English.pdf" data-resume target="_blank" rel="noopener" aria-label="Download resume">
+        <svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 12v6M9 15l3 3 3-3"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ===== Contact panel ===== -->
+  <div class="contact-back" data-close-contact></div>
+  <section class="contact" aria-hidden="true">
+    <button class="contact-return" data-close-contact>
+      <svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      <span data-i18n="contact.return">Return</span>
+    </button>
+    <h2 data-i18n="contact.title">Contact</h2>
+    <div class="contact-num">
+      <a href="mailto:pooree.limskun@gmail.com">pooree.limskun@gmail.com</a>
+      <a href="tel:0957594433">(+66) 95 759 4433</a>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <div class="input-group">
+        <input type="email" id="cEmail" required placeholder=" ">
+        <label for="cEmail" data-i18n="contact.email">Your email</label>
+      </div>
+      <div class="input-group">
+        <input type="text" id="cName" required placeholder=" ">
+        <label for="cName" data-i18n="contact.name">Your full name</label>
+      </div>
+      <div class="input-group">
+        <textarea id="cMsg" rows="5" required placeholder=" "></textarea>
+        <label for="cMsg" data-i18n="contact.msg">Your project</label>
+      </div>
+      <button type="submit" class="btn-primary"><span data-i18n="contact.send">Send</span>
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="form-note" data-i18n="contact.note">Opens your email app with the message ready to send.</p>
+    </form>
+  </section>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <div class="hero-grid">
+        <div class="editor">
+          <div class="editor-bar">
+            <i></i><i></i><i></i>
+            <span>hello.ts</span>
+          </div>
+          <div class="editor-body">
+            <div class="line l1"><span class="ln">01</span><h2 class="type" data-i18n="hero.l1">Hello, I'm <em>Pooree</em> !</h2></div>
+            <div class="line l2"><span class="ln">02</span><h2 class="type"><span data-i18n="hero.l2">I design and build</span>
+              <span class="inline-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="12" rx="3"/><rect x="6" y="26" width="36" height="12" rx="3"/><circle cx="13" cy="14" r="1.8" class="dot"/><circle cx="13" cy="32" r="1.8" class="dot"/><path d="M22 14h14M22 32h14"/></svg>
+              </span>
+            </h2></div>
+            <div class="line l3"><span class="ln">03</span><h2 class="type" data-i18n="hero.l3">backend systems.</h2></div>
+            <div class="line l4"><span class="ln">04</span><p class="comment">// Node.js · NestJS · TypeScript · Google Cloud</p></div>
+          </div>
+        </div>
+
+        <div class="hero-side reveal">
+          <div class="photo">
+            <img src="profile.png" alt="Pooree Limskun">
+            <span class="initials">PL</span>
+          </div>
+          <div class="badge-row">
+            <span class="badge" data-i18n="hero.badge1"><b>7+</b> years coding</span>
+            <span class="badge" data-i18n="hero.badge2"><b>5+</b> years Node.js</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="hero-sub reveal" data-i18n="hero.sub">Backend Developer • Full Stack Developer — I build REST APIs, databases and business logic for production systems, and ship them to Google Cloud with Docker.</p>
+
+      <a href="#process" class="learn-more">
+        <span data-i18n="hero.more">Learn more</span>
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- ===== PROCESS ===== -->
+    <section id="process" class="process">
+      <div class="section-label reveal"><span>//</span> <span data-i18n="process.label">How I work</span></div>
+      <ol class="steps">
+        <li class="reveal"><span class="ln">01</span><p data-i18n="process.s1">First, we need to understand</p></li>
+        <li class="reveal"><span class="ln">02</span><p class="big" data-i18n="process.s2">the business <span class="hl">...</span></p></li>
+        <li class="reveal"><span class="ln">03</span><p data-i18n="process.s3">Then I sketch the architecture</p></li>
+        <li class="reveal"><span class="ln">04</span><p class="big" data-i18n="process.s4">and the flow in <span class="pill">Figma</span></p></li>
+        <li class="reveal"><span class="ln">05</span><p data-i18n="process.s5">Data deserves a solid</p></li>
+        <li class="reveal"><span class="ln">06</span><p class="big" data-i18n="process.s6">database design.</p></li>
+        <li class="reveal"><span class="ln">07</span><p data-i18n="process.s7">Next, I write clean REST APIs with</p></li>
+        <li class="reveal"><span class="ln">08</span><p class="big"><span class="pill blue">NestJS</span> &amp; <span class="pill">Prisma</span></p></li>
+        <li class="reveal"><span class="ln">09</span><p data-i18n="process.s9">Finally, I ship it with Docker to</p></li>
+        <li class="reveal"><span class="ln">10</span><p class="big">Google Cloud Run <span class="rocket" aria-hidden="true">🚀</span></p></li>
+        <li class="reveal"><span class="ln">11</span><p data-i18n="process.s11">…and keep it fast, stable and</p></li>
+        <li class="reveal"><span class="ln">12</span><p class="big accent" data-i18n="process.s12">maintainable.</p></li>
+      </ol>
+    </section>
+
+    <!-- ===== CASE STUDY (chat) ===== -->
+    <section class="case">
+      <div class="section-label reveal"><span>//</span> <span data-i18n="case.label">Case study — Freelance</span></div>
+      <h2 class="section-title reveal" data-i18n="case.title">Transport Management <span>POS</span></h2>
+
+      <div class="chat">
+        <div class="bubble client reveal">
+          <span class="who" data-i18n="case.client">Client</span>
+          <span data-i18n="case.b1">We run a transport business and need a POS system built for how we actually work — from the frontend to production.</span>
+        </div>
+        <div class="bubble me reveal">
+          <span class="who" data-i18n="case.me">Pooree</span>
+          <span data-i18n="case.b2">Great! Let's map your requirements first. I'll design the architecture with the team in Figma, then build the backend with NestJS &amp; Prisma.</span>
+        </div>
+        <div class="bubble client reveal">
+          <span class="who" data-i18n="case.client">Client</span>
+          <span data-i18n="case.b3">And where will it run? 🤔</span>
+        </div>
+        <div class="bubble me reveal">
+          <span class="who" data-i18n="case.me">Pooree</span>
+          <span data-i18n="case.b4">On Google Cloud — Docker on Cloud Run, Cloud SQL for data, Cloud Storage for files. Delivered to production within the agreed scope.</span>
+        </div>
+      </div>
+
+      <div class="case-grid">
+        <article class="case-card reveal" style="--bg:#F5FFF8">
+          <span class="ln">01</span>
+          <h3 data-i18n="case.c1t">Analysis</h3>
+          <p data-i18n="case.c1">Analyzed customer requirements and business needs, then collaborated with the team on the overall frontend and backend architecture in Figma.</p>
+        </article>
+        <article class="case-card reveal" style="--bg:#E2F8FF">
+          <span class="ln">02</span>
+          <h3 data-i18n="case.c2t">Build</h3>
+          <p data-i18n="case.c2">Developed the backend services with NestJS and managed the database layer using Prisma.</p>
+        </article>
+        <article class="case-card reveal" style="--bg:#FFE6C5">
+          <span class="ln">03</span>
+          <h3 data-i18n="case.c3t">Ship</h3>
+          <p data-i18n="case.c3">Deployed to production on Google Cloud Platform using Docker, Cloud Run, Cloud SQL and Cloud Storage — and handed over for production use.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="projects">
+      <div class="section-label reveal"><span>//</span> <span data-i18n="projects.label">Selected work</span></div>
+      <h2 class="section-title reveal" data-i18n="projects.title">My best <span>projects</span></h2>
+
+      <div class="slider-controls reveal">
+        <button class="slide-btn" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button class="slide-btn" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+
+      <div class="cards" id="cards">
+        <article class="card" style="--bg:#E9FFFF">
+          <div class="mock">
+            <div class="mock-win">
+              <div class="mock-bar"><i></i><i></i><i></i></div>
+              <div class="mock-dash">
+                <div class="kpi"></div><div class="kpi"></div><div class="kpi"></div>
+                <div class="bars"><b style="--h:40%"></b><b style="--h:70%"></b><b style="--h:55%"></b><b style="--h:90%"></b><b style="--h:65%"></b><b style="--h:80%"></b></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="tag">Auto Fast Co., Ltd</span>
+            <h3 data-i18n="p1.t">Automotive Service Center POS</h3>
+            <p data-i18n="p1.d">Customers, vehicle information, products &amp; inventory, purchase orders, goods receiving, work orders, Excel/PDF reporting and dashboards.</p>
+            <ul class="stack"><li>Node.js</li><li>Express.js</li><li>Cloud Run</li><li>Docker</li></ul>
+          </div>
+        </article>
+
+        <article class="card" style="--bg:#fbffde">
+          <div class="mock">
+            <div class="mock-flow">
+              <span class="node">Request</span><span class="arrow"></span>
+              <span class="node">Level 1</span><span class="arrow"></span>
+              <span class="node">Level 2</span><span class="arrow"></span>
+              <span class="node ok">Approved ✓</span>
+              <span class="mail">✉ notify</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="tag">Auto Fast Co., Ltd</span>
+            <h3>Pricelist Management</h3>
+            <p data-i18n="p2.d">Multi-level price approval workflows with email notifications and price data export.</p>
+            <ul class="stack"><li>Node.js</li><li>Express.js</li><li>REST API</li><li>Email</li><li>Export</li></ul>
+          </div>
+        </article>
+
+        <article class="card" style="--bg:#f7bac6">
+          <div class="mock">
+            <div class="mock-phone">
+              <div class="otp"><i>4</i><i>8</i><i>1</i><i>5</i></div>
+              <div class="video"><span>▶</span></div>
+              <div class="rank"><b></b><b></b><b></b></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="tag">Auto Fast Co., Ltd</span>
+            <h3>E-Learning Platform</h3>
+            <p data-i18n="p3.d">SMS/Email OTP authentication, training video playback, exam result recording, ranking calculation and access-control management.</p>
+            <ul class="stack"><li>Node.js</li><li>Express.js</li><li>OTP Auth</li><li>RBAC</li><li>Cloud Storage</li></ul>
+          </div>
+        </article>
+
+        <article class="card" style="--bg:#d5ffe1">
+          <div class="mock">
+            <div class="mock-cloud">
+              <span class="cl">Docker</span>
+              <span class="cl">Cloud Run</span>
+              <span class="cl">Cloud SQL</span>
+              <span class="cl">Storage</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="tag" data-i18n="p4.tag">Freelance</span>
+            <h3 data-i18n="p4.t">Transport Management POS</h3>
+            <p data-i18n="p4.d">End-to-end delivery: requirements, architecture in Figma, NestJS + Prisma backend and production deployment on Google Cloud.</p>
+            <ul class="stack"><li>NestJS</li><li>Prisma</li><li>GCP</li><li>Docker</li></ul>
+          </div>
+        </article>
+
+        <article class="card" style="--bg:#E2F8FF">
+          <div class="mock">
+            <div class="mock-micro">
+              <span class="svc gw">API Gateway</span>
+              <span class="svc">users</span><span class="svc">orders</span><span class="svc">billing</span>
+              <span class="db">MongoDB</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="tag">Cyber Advance System &amp; Network</span>
+            <h3 data-i18n="p5.t">Microservice Web Apps</h3>
+            <p data-i18n="p5.d">Analyzed and designed systems with microservice architecture; full-stack apps with Node.js REST APIs, Angular UIs and MongoDB.</p>
+            <ul class="stack"><li>Node.js</li><li>Angular</li><li>MongoDB</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="experience">
+      <div class="section-label reveal"><span>//</span> <span data-i18n="exp.label">Career</span></div>
+      <h2 class="section-title reveal" data-i18n="exp.title">Work <span>experience</span></h2>
+
+      <div class="timeline">
+        <article class="job reveal">
+          <div class="job-meta">
+            <span class="period" data-i18n="exp.j1.period">2021 — Present</span>
+            <span class="company">Auto Fast Co., Ltd</span>
+          </div>
+          <div class="job-body">
+            <h3>Programmer (Backend Development)</h3>
+            <ul data-i18n="exp.j1.list">
+              <li>Designed system architecture and flow diagrams in Figma; developed REST APIs for end-to-end integration with frontend apps.</li>
+              <li>Developed backend services for web applications using Node.js and NestJS.</li>
+              <li>Designed and developed databases and business logic.</li>
+              <li>Deployed applications to Google Cloud Run using Docker; managed files on Google Cloud Storage.</li>
+              <li>Maintained and supported production systems — troubleshooting, maintenance and performance optimization.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job reveal">
+          <div class="job-meta">
+            <span class="period" data-i18n="exp.j2.period">2019 — 2021</span>
+            <span class="company">Cyber Advance System and Network Co., Ltd</span>
+          </div>
+          <div class="job-body">
+            <h3>Software Developer</h3>
+            <ul data-i18n="exp.j2.list">
+              <li>Analyzed and designed systems using Microservice Architecture.</li>
+              <li>Developed full-stack web applications: REST APIs with Node.js and user interfaces with Angular.</li>
+              <li>Designed and managed NoSQL databases using MongoDB.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job reveal">
+          <div class="job-meta">
+            <span class="period" data-i18n="p4.tag">Freelance</span>
+            <span class="company" data-i18n="p4.t">Transport Management POS</span>
+          </div>
+          <div class="job-body">
+            <h3 data-i18n="exp.j3.title">Freelance Project</h3>
+            <ul data-i18n="exp.j3.list">
+              <li>Gathered requirements and designed the overall frontend/backend architecture with the team in Figma.</li>
+              <li>Built backend services with NestJS and managed the database with Prisma.</li>
+              <li>Deployed to production on GCP (Cloud Run, Cloud SQL, Cloud Storage) using Docker.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="skills">
+      <div class="section-label reveal"><span>//</span> <span data-i18n="skills.label">Toolbox</span></div>
+      <h2 class="section-title reveal" data-i18n="skills.title">Technical <span>skills</span></h2>
+
+      <div class="skill-grid">
+        <div class="skill-card reveal" style="--bg:#F5FFF8">
+          <h4 data-i18n="skills.lang">Languages</h4>
+          <ul><li>JavaScript</li><li>TypeScript</li><li>Go</li><li>SQL</li><li>HTML</li><li>CSS / SCSS</li></ul>
+        </div>
+        <div class="skill-card reveal" style="--bg:#E2F8FF">
+          <h4>Backend</h4>
+          <ul><li class="main">Node.js</li><li class="main">NestJS</li><li>Express.js</li><li>Prisma ORM</li></ul>
+        </div>
+        <div class="skill-card reveal" style="--bg:#FFE6C5">
+          <h4>Frontend</h4>
+          <ul><li>Vue.js</li><li>Angular</li></ul>
+        </div>
+        <div class="skill-card reveal" style="--bg:#E9FFFF">
+          <h4 data-i18n="skills.db">Database</h4>
+          <ul><li>Microsoft SQL Server</li><li>MongoDB</li><li>MySQL</li></ul>
+        </div>
+        <div class="skill-card wide reveal" style="--bg:#fbffde">
+          <h4>Cloud &amp; DevOps</h4>
+          <ul><li class="main">Docker</li><li class="main">Cloud Run</li><li>Cloud SQL</li><li>Cloud Storage</li><li>Git</li><li>GitHub</li><li>GitLab</li><li>GitHub Actions</li><li>GitLab CI/CD</li></ul>
+        </div>
+        <div class="skill-card reveal" style="--bg:#f7bac6">
+          <h4 data-i18n="skills.tools">Tools</h4>
+          <ul><li>VS Code</li><li>Postman</li><li>Figma</li><li>Claude Code</li></ul>
+        </div>
+      </div>
+
+      <div class="learning reveal">
+        <span class="ln">&gt;_</span>
+        <p><span data-i18n="skills.learning">Currently learning</span> <span class="typed" id="learning"></span><span class="caret">|</span></p>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about">
+      <div class="section-label reveal"><span>//</span> <span data-i18n="nav.about">About me</span></div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="section-title" data-i18n="about.title">A developer who cares about <span>what happens after launch.</span></h2>
+          <p data-i18n="about.p1">I'm a Software Developer with over 7 years of experience, specializing in backend development with the Node.js ecosystem — Express.js, NestJS and TypeScript — for more than 5 years.</p>
+          <p data-i18n="about.p2">I design and develop REST APIs, databases and business logic for production systems, with a strong focus on performance, stability and maintainability for long-term reliability. I understand the whole journey: from frontend and backend development to production deployment on Google Cloud Platform using Docker.</p>
+          <button class="btn-primary" data-open-contact><span data-i18n="about.cta">Let's talk</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <div class="about-side">
+          <div class="info-card reveal">
+            <h4 data-i18n="about.edu">Education</h4>
+            <div class="edu">
+              <b data-i18n="edu1.deg">B.Sc. Computer Science</b>
+              <span data-i18n="edu1.school">Rajamangala University of Technology Suvarnabhumi, Hantra Campus</span>
+              <em data-i18n="edu1.year">2016 — 2019</em>
+            </div>
+            <div class="edu">
+              <b data-i18n="edu2.deg">Vocational Certificate in Information Technology</b>
+              <span data-i18n="edu2.school">Phra Nakhon Si Ayutthaya Technical College</span>
+              <em data-i18n="edu2.year">2013 — 2016</em>
+            </div>
+          </div>
+          <div class="info-card reveal">
+            <h4 data-i18n="about.langs">Languages</h4>
+            <p class="langs" data-i18n="about.langList"><span>🇹🇭 Thai</span><span>🇬🇧 English</span></p>
+          </div>
+          <a class="resume-link reveal" href="Resume-Pooree-English.pdf" data-resume target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 12v6M9 15l3 3 3-3"/></svg>
+            <span data-i18n="about.resume">Download resume (PDF)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <h1 class="footer-name" data-i18n="footer.name">POOREE LIMSKUN</h1>
+    <div class="footer-row">
+      <a href="mailto:pooree.limskun@gmail.com">pooree.limskun@gmail.com</a>
+      <a href="tel:0957594433">095-759-4433</a>
+      <span>© <span id="year"></span> <span data-i18n="footer.copy">Pooree Limskun</span></span>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
