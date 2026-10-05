@@ -20,8 +20,8 @@ const I18N_TH = {
   'toast.email': 'คัดลอกอีเมลแล้ว',
   'toast.phone': 'คัดลอกเบอร์โทรแล้ว',
 
-  'hero.l1': 'สวัสดี, ฉันชื่อ <em>ภูรี</em> !',
-  'hero.l2': 'ฉันออกแบบและพัฒนา',
+  'hero.l1': 'สวัสดี, ผมชื่อ <em>ภูรี</em> !',
+  'hero.l2': 'ออกแบบและพัฒนา',
   'hero.l3': 'Web Application.',
   'hero.badge1': 'ประสบการณ์ <b>7+</b> ปี',
   'hero.badge2': 'Backend <b>5</b> ปี · Full Stack <b>2</b> ปี',
