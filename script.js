@@ -205,7 +205,7 @@ document.querySelectorAll('.slide-btn').forEach(btn => {
 
 /* ---------- "Currently learning" typer ---------- */
 const learningEl = document.getElementById('learning');
-const learning = ['React', 'PostgreSQL', 'GraphQL', 'Go'];
+const learning = ['React', 'PostgreSQL', 'GraphQL'];
 if (reduceMotion) {
   learningEl.textContent = learning.join(', ');
 } else {

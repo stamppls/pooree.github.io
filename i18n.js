@@ -1,7 +1,7 @@
 /* Thai translations. English is read from the HTML itself,
    so only keys that differ in Thai need to be listed here. */
 const I18N_TH = {
-  'meta.title': 'ภูรี ลิ้มสกุล — Software Developer',
+  'meta.title': 'ภูรี ลิ้มสกุล — Full Stack & Backend Developer',
   'resume': 'Resume-Pooree-Thai.pdf',
 
   'nav.home': 'หน้าแรก',
@@ -24,8 +24,8 @@ const I18N_TH = {
   'hero.l2': 'ออกแบบและพัฒนา',
   'hero.l3': 'Web Application.',
   'hero.badge1': 'ประสบการณ์ <b>7+</b> ปี',
-  'hero.badge2': 'Backend <b>5</b> ปี · Full Stack <b>2</b> ปี',
-  'hero.sub': 'Software Developer — เชี่ยวชาญ Backend ด้วย Node.js และ NestJS 5 ปี เคยพัฒนาแบบ Full Stack 2 ปี ดูแลระบบได้ตั้งแต่ฐานข้อมูล หน้าจอ จนถึง Production บน Google Cloud',
+  'hero.badge2': 'Backend <b>5+</b> ปี · Full Stack',
+  'hero.sub': 'Full Stack &amp; Backend Developer — เชี่ยวชาญ Backend ด้วย Node.js Ecosystem (Express.js, NestJS, TypeScript) มากกว่า 5 ปี ดูแลระบบได้ตั้งแต่ฐานข้อมูล หน้าจอ จนถึง Production บน Google Cloud',
   'hero.more': 'ดูเพิ่มเติม',
 
   'process.label': 'วิธีการทำงานของฉัน',
@@ -53,7 +53,7 @@ const I18N_TH = {
   'case.c2t': 'พัฒนา',
   'case.c2': 'พัฒนา Backend ด้วย NestJS และจัดการฐานข้อมูลด้วย Prisma',
   'case.c3t': 'ส่งมอบ',
-  'case.c3': 'Deploy ระบบขึ้น Production บน Google Cloud Platform ด้วย Docker ใช้งาน Cloud Run, Cloud SQL, Cloud Storage และส่งมอบให้ลูกค้าใช้งานจริง',
+  'case.c3': 'วาง CI/CD ด้วย GitLab CI/CD และ Deploy ขึ้น Google Cloud Platform ด้วย Docker ใช้งาน Cloud Run, Cloud SQL, Cloud Storage และส่งมอบให้ลูกค้าใช้งานจริงตาม Scope ที่กำหนด',
 
   'projects.label': 'ผลงานที่คัดสรร',
   'projects.title': 'โปรเจกต์<span>เด่น</span>',
@@ -63,7 +63,7 @@ const I18N_TH = {
   'p3.d': 'ระบบยืนยันตัวตนผ่าน SMS/Email OTP ดูวิดีโออบรม บันทึกผลสอบ คำนวณ Ranking และจัดการสิทธิ์การเข้าถึงข้อมูล',
   'p4.tag': 'ฟรีแลนซ์',
   'p4.t': 'ระบบจัดการข้อมูลขนส่ง (POS)',
-  'p4.d': 'ดูแลครบวงจร: เก็บความต้องการ ออกแบบระบบใน Figma พัฒนา Backend ด้วย NestJS + Prisma และ Deploy ขึ้น Google Cloud',
+  'p4.d': 'ดูแลครบวงจร: เก็บความต้องการ ออกแบบระบบใน Figma พัฒนา Backend ด้วย NestJS + Prisma วาง CI/CD ด้วย GitLab CI/CD และ Deploy ขึ้น Google Cloud',
   'p5.t': 'Web Application แบบ Microservice',
   'p5.d': 'วิเคราะห์และออกแบบระบบด้วย Microservice Architecture พัฒนาแบบ Full Stack ด้วย REST API บน Node.js, UI ด้วย Angular และฐานข้อมูล MongoDB',
 
@@ -71,11 +71,11 @@ const I18N_TH = {
   'exp.title': 'ประสบการณ์<span>ทำงาน</span>',
   'exp.j1.period': '2564 — ปัจจุบัน',
   'exp.j1.list': `
-    <li>ออกแบบ System Architecture และ Flow Diagram ด้วย Figma และพัฒนา REST API สำหรับเชื่อมต่อกับ Frontend แบบ End-to-End</li>
-    <li>พัฒนา Backend สำหรับ Web Application ด้วย Node.js และ NestJS</li>
-    <li>ออกแบบและพัฒนา Database และ Business Logic สำหรับระบบ</li>
-    <li>Deploy ระบบขึ้น Google Cloud Run ด้วย Docker และจัดการไฟล์ผ่าน Cloud Storage</li>
-    <li>ดูแลระบบหลังขึ้น Production แก้ไขปัญหาและจุดบกพร่อง บำรุงรักษาและปรับปรุงประสิทธิภาพซอฟต์แวร์</li>`,
+    <li>ออกแบบ System Architecture และ Flow Diagram และทำงานร่วมกับนักพัฒนา Frontend ในการพัฒนาระบบแบบ End-to-End</li>
+    <li>วิเคราะห์และออกแบบ REST API, Database และ Business Logic</li>
+    <li>พัฒนา Backend Service และทดสอบ API</li>
+    <li>วาง CI/CD Pipeline และ Deploy ระบบขึ้น Google Cloud ด้วย Docker</li>
+    <li>ดูแลระบบหลังขึ้น Production แก้ไขปัญหา และปรับปรุงประสิทธิภาพซอฟต์แวร์</li>`,
   'exp.j2.period': '2562 — 2564',
   'exp.j2.list': `
     <li>วิเคราะห์และออกแบบระบบด้วยสถาปัตยกรรม Microservice Architecture</li>
@@ -85,7 +85,8 @@ const I18N_TH = {
   'exp.j3.list': `
     <li>วิเคราะห์ปัญหาและความต้องการของลูกค้า ออกแบบโครงสร้างระบบทั้ง Frontend และ Backend ร่วมกับทีมด้วย Figma</li>
     <li>พัฒนา Backend ด้วย NestJS และจัดการฐานข้อมูลด้วย Prisma</li>
-    <li>Deploy ระบบขึ้น Production บน Google Cloud Platform (Cloud Run, Cloud SQL, Cloud Storage) ด้วย Docker</li>`,
+    <li>วาง CI/CD Pipeline ด้วย GitLab CI/CD และ Deploy ขึ้น Google Cloud ด้วย Docker (Cloud Run, Cloud SQL, Cloud Storage)</li>
+    <li>ส่งมอบระบบให้ลูกค้าใช้งานจริงตาม Scope ที่ตกลงกัน</li>`,
 
   'skills.label': 'เครื่องมือที่ใช้',
   'skills.title': 'ทักษะ<span>ความสามารถ</span>',
@@ -95,8 +96,8 @@ const I18N_TH = {
   'skills.learning': 'กำลังศึกษา',
 
   'about.title': 'สร้างซอฟต์แวร์ที่<span>เสถียร มีประสิทธิภาพ และดูแลต่อได้</span>',
-  'about.p1': 'มีประสบการณ์พัฒนาซอฟต์แวร์มากกว่า 7 ปี โดยเริ่มต้นสายงานด้วยการพัฒนาแบบ Full Stack 2 ปี ก่อนจะเน้นการพัฒนา Backend ด้วย Node.js Ecosystem (Express.js, NestJS, TypeScript) มากกว่า 5 ปี',
-  'about.p2': 'มีประสบการณ์ในการออกแบบและพัฒนา REST API, Database และ Business Logic สำหรับใช้งานจริง โดยให้ความสำคัญกับ Performance, Stability และ Maintainability เพื่อให้ระบบสามารถดูแลและพัฒนาต่อได้ในระยะยาว ด้วยพื้นฐานจากประสบการณ์ทำงาน จึงเข้าใจการทำงานของระบบแบบ End-to-End ตั้งแต่ Frontend, Backend จนถึงการ Deploy ระบบขึ้น Production บน Google Cloud Platform (Cloud Run, Cloud SQL) โดยใช้ Docker',
+  'about.p1': 'มีประสบการณ์พัฒนาซอฟต์แวร์มากกว่า 7 ปี โดยเน้นการพัฒนา Backend ด้วย Node.js Ecosystem (Express.js, NestJS, TypeScript) มากกว่า 5 ปี',
+  'about.p2': 'มีประสบการณ์ในการออกแบบและพัฒนา REST API, Database และ Business Logic สำหรับใช้งานจริง โดยให้ความสำคัญกับ Performance, Stability และ Maintainability เพื่อให้ระบบสามารถดูแลและพัฒนาต่อได้ในระยะยาว นอกจากนี้ยังมีประสบการณ์พัฒนาแบบ Full Stack ทั้ง Frontend และ Backend รวมถึงการ Deploy ระบบขึ้น Production บน Google Cloud Platform (Cloud Run, Cloud SQL, Cloud Storage) โดยใช้ Docker',
   'about.edu': 'ประวัติการศึกษา',
   'edu1.deg': 'ปริญญาตรี สาขาวิทยาการคอมพิวเตอร์',
   'edu1.school': 'มหาวิทยาลัยเทคโนโลยีราชมงคลสุวรรณภูมิ ศูนย์พระนครศรีอยุธยา หันตรา',
@@ -105,7 +106,7 @@ const I18N_TH = {
   'edu2.school': 'วิทยาลัยเทคนิคพระนครศรีอยุธยา',
   'edu2.year': '2556 — 2559',
   'about.langs': 'ภาษา',
-  'about.langList': '<span>🇹🇭 ไทย</span><span>🇬🇧 อังกฤษ</span>',
+  'about.langList': '<span>ไทย</span><span>อังกฤษ</span>',
   'about.cta': 'ติดต่อฉัน',
   'about.resume': 'ดาวน์โหลดเรซูเม่ (PDF)',
 

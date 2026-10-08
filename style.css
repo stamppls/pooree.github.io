@@ -367,6 +367,7 @@ body.contact-open .contact-back { opacity: 1; pointer-events: auto; }
 .skill-card { background: var(--bg); padding: 26px; border-radius: var(--radius); transition: 200ms; }
 .skill-card:hover { transform: translateY(-4px); }
 .skill-card.wide { grid-column: span 2; }
+.skill-card.full { grid-column: 1 / -1; }
 .skill-card h4 { font-size: 1.1rem; margin-bottom: 14px; }
 .skill-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .skill-card li { background: rgba(255, 255, 255, .85); color: var(--ink); padding: 6px 12px; border-radius: 6px; font-size: .9rem; }
